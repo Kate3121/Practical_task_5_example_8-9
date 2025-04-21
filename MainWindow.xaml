@@ -1,0 +1,25 @@
+﻿<Window x:Class="Practical_task_5_example_8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practical_task_5_example_8"
+        mc:Ignorable="d"
+		Title="GridSplitterSample" Height="300" Width="300">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<!-- Ліва колонка -->
+			<ColumnDefinition Width="*" />
+			<!-- Колонка для роздільника -->
+			<ColumnDefinition Width="10" />
+			<!-- Права колонка -->
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+		<!-- Текст у лівій частині  -->
+		<TextBlock FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" FontFamily="Clarendon Blk BT">Left side</TextBlock>
+		<GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch"/>
+		<!-- Текст у правій частині  -->
+		<TextBlock Grid.Column="2" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" FontFamily="Clarendon Blk BT">Right side</TextBlock>
+	</Grid>
+</Window>
+
