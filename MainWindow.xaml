@@ -7,19 +7,22 @@
         mc:Ignorable="d"
 		Title="GridSplitterSample" Height="300" Width="300">
 	<Grid>
-		<Grid.ColumnDefinitions>
-			<!-- Ліва колонка -->
-			<ColumnDefinition Width="*" />
-			<!-- Колонка для роздільника -->
-			<ColumnDefinition Width="10" />
-			<!-- Права колонка -->
-			<ColumnDefinition Width="*" />
-		</Grid.ColumnDefinitions>
-		<!-- Текст у лівій частині  -->
-		<TextBlock FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" FontFamily="Clarendon Blk BT">Left side</TextBlock>
-		<GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch"/>
-		<!-- Текст у правій частині  -->
-		<TextBlock Grid.Column="2" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" FontFamily="Clarendon Blk BT">Right side</TextBlock>
+		<Grid.RowDefinitions>
+			<!-- Верхній рядок -->
+			<RowDefinition Height="*" />
+			<!-- Рядок для роздільника -->
+			<RowDefinition Height="10" />
+			<!-- Нижній рядок -->
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+		<!-- Текст у верхній частині -->
+		<TextBlock FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" FontFamily="Clarendon Blk BT">Top</TextBlock>
+
+		<!-- Елемент GridSplitter для вертикального розділення рядків -->
+		<GridSplitter Grid.Row="1" Height="5" HorizontalAlignment="Stretch"/>
+
+		<!-- Текст у нижній частині -->
+		<TextBlock Grid.Row="2" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" FontFamily="Clarendon Blk BT">Bottom</TextBlock>
 	</Grid>
 </Window>
-
